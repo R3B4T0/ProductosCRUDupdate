@@ -69,15 +69,10 @@ public class ProductosCRUD {
         return filasAfectadas;
     }
     
-    public static void insertaProducto() {
+    public static void insertaProducto(Productos producto) {
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("com.mycompany_ProductosCRUDupdate_war_1.0-SNAPSHOTPU");
         EntityManager manager = factory.createEntityManager();
         manager.getTransaction().begin();
-        Productos producto = new Productos();
-        producto.setNombre("Espinacas");
-        producto.setPrecio(10);
-        producto.setImagen("espinacas.jpg");
-        producto.setCategoria("complementos");
         manager.merge(producto);
         manager.getTransaction().commit();
     }

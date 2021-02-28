@@ -46,13 +46,13 @@ public class ServletProductos extends HttpServlet {
                 out.println(p.getNombre());
             }
             Productos miProducto = new Productos();
-            miProducto.setId(11);
-            miProducto.setNombre("Tarta de fresa");
-            miProducto.setImagen("tartafresa.jpg");
+            //miProducto.setId(11);
+            miProducto.setNombre("Tarta de manzana");
+            miProducto.setImagen("tartamanzana.jpg");
             miProducto.setCategoria("postres");
             miProducto.setPrecio(6.0f);
             //ProductosCRUD.actualizaProducto(miProducto);
-            ProductosCRUD.insertaProducto();
+            ProductosCRUD.insertaProducto(miProducto);
             out.println("</body>");
             out.println("</html>");
     }
